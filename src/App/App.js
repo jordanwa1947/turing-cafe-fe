@@ -17,11 +17,13 @@ class App extends Component {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({}),
+      body: JSON.stringify(reservation),
     })
       .then(response => response.json())
-      .then(responseJSON => {
-        console.log(responseJSON)
+      .then(newReservation => {
+        this.setState({
+          reservations: this.state.reservations.concat([newReservation])
+        })
       })
       .catch(err => console.log(err.message))
   }
