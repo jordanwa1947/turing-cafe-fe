@@ -22,7 +22,7 @@ class App extends Component {
 
   buildReservationComponent(reservations) {
     return this.state.reservations.map(reservation => {
-      return <Reservation />
+      return <Reservation key={reservation.id} reservation={reservation}/>
     })
   }
 
