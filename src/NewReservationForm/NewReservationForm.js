@@ -36,6 +36,7 @@ class NewReservationForm extends React.Component {
         <input
           type='number'
           name='number'
+          placeholder="number of guests"
           onChange={this.handleChange}
           value={this.state.number}
         />

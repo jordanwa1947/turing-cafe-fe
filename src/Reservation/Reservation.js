@@ -3,7 +3,7 @@ import './Reservation.css'
 
 function Reservation({ reservation }) {
   return (
-    <section>
+    <section className="reservation-card">
       <h3>{reservation.name}</h3>
       <p>{reservation.date}</p>
       <p>{reservation.time}</p>
