@@ -26,6 +26,19 @@ class NewReservationForm extends React.Component {
           onChange={this.handleChange}
           value={this.state.name}
         />
+        <input
+          type='date'
+          name='date'
+          placeholder="date"
+          onChange={this.handleChange}
+          value={this.state.date}
+        />
+        <input
+          type='number'
+          name='number'
+          onChange={this.handleChange}
+          value={this.state.number}
+        />
         <select value={this.state.time} onChange={this.handleChange} name='time'>
           <option value="7:00">7:00</option>
           <option value="7:30">7:30</option>

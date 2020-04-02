@@ -9,6 +9,8 @@ describe('NewReservationForm', () => {
     const { getByPlaceholderText, getByText } = render(<NewReservationForm />)
 
     expect(getByPlaceholderText('name')).toBeInTheDocument();
+    expect(getByPlaceholderText('date')).toBeInTheDocument();
+    expect(getByPlaceholderText('name')).toBeInTheDocument();
     expect(getByText("Create Reservation")).toBeInTheDocument();
   })
 
