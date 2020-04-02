@@ -2,7 +2,6 @@ import React from 'react'
 import './Reservation.css'
 
 function Reservation({ reservation }) {
-  debugger;
   return (
     <section>
       <h3>{reservation.name}</h3>

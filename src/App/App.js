@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Reservation from '../Reservation/Reservation'
+import Reservation from '../Reservation/Reservation';
+import NewReservationForm from '../NewReservationForm/NewReservationForm';
 import './App.css';
 
 class App extends Component {
@@ -8,6 +9,21 @@ class App extends Component {
     this.state = {
       reservations: []
     }
+  }
+
+  addNewReservation = (reservation) => {
+    fetch('http://localhost:3001/api/v1/reservations', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({}),
+    })
+      .then(response => response.json())
+      .then(responseJSON => {
+        console.log(responseJSON)
+      })
+      .catch(err => console.log(err.message))
   }
 
   componentDidMount() {
@@ -34,6 +50,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
+          <NewReservationForm addNewReservation={this.addNewReservation}/>
           {this.buildReservationComponent()}
         </div>
       </div>
